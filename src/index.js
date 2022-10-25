@@ -1,13 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { Amplify } from "aws-amplify";
+import { AmplifyProvider } from "@aws-amplify/ui-react";
+import config from "./aws-exports";
+import "@aws-amplify/ui-react/styles.css";
+import { studioTheme } from "./ui-components";
+Amplify.configure(config);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <AmplifyProvider theme={studioTheme}>
+      <App />
+    </AmplifyProvider>
   </React.StrictMode>
 );
 

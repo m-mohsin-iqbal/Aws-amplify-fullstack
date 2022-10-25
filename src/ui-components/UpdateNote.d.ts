@@ -9,6 +9,8 @@ import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
 import { Note } from "../models";
 import { FlexProps } from "@aws-amplify/ui-react";
 export declare type UpdateNoteProps = React.PropsWithChildren<Partial<FlexProps> & {
+    title?: String;
+    text?: String;
     note?: Note;
 } & {
     overrides?: EscapeHatchProps | undefined | null;

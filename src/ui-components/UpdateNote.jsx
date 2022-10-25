@@ -15,7 +15,7 @@ import { Note } from "../models";
 import { schema } from "../models/schema";
 import { Button, Divider, Flex, Icon, TextField } from "@aws-amplify/ui-react";
 export default function UpdateNote(props) {
-  const { note, overrides, ...rest } = props;
+  const { title, text, note, overrides, ...rest } = props;
   const [
     textFieldThreeOneSixZeroTwoFourSevenEightValue,
     setTextFieldThreeOneSixZeroTwoFourSevenEightValue,
